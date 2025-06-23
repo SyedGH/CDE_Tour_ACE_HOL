@@ -45,23 +45,23 @@ from cloudera.cdp.airflow.operators.cde_operator import CDEJobRunOperator
 from airflow.operators.bash import BashOperator
 from airflow.operators.python_operator import PythonOperator
 
-username = "pdefusco_020723"
+username = "user0XX"
 
 print("Running as Username: ", username)
 
-cde_job_name_05_A = "user05_ace_020723" #Replace with CDE Job Name for Script 5 A
-cde_job_name_05_B = "user05B_ace_020723"  #Replace with CDE Job Name for Script 5 B
+cde_job_name_05_A = "user0XX-05-A-ETL" #Replace with CDE Job Name for Script 5 A
+cde_job_name_05_B = "user0XX-05-B-Reports"  #Replace with CDE Job Name for Script 5 B
 
 #DAG instantiation
 default_args = {
     'owner': "pauldefusco",
     'retry_delay': timedelta(seconds=10),
     'depends_on_past': False,
-    'start_date': datetime(2022,11,22,8), #Start Date must be in the past
-    'end_date': datetime(2023,9,30,8) #End Date must be in the future
+    'start_date': datetime(2024,11,22,8), #Start Date must be in the past
+    'end_date': datetime(2027,9,30,8) #End Date must be in the future
 }
 
-dag_name = '{}-05-airflow-pipeline_1'.format(username)
+dag_name = '{}-05-airflow-pipeline_1'.format(username) #Update name if you hit DAG with same ID already exists error
 
 intro_dag = DAG(
     dag_name,
