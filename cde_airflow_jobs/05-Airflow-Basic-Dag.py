@@ -1,5 +1,5 @@
 #****************************************************************************
-# (C) Cloudera, Inc. 2020-2022
+# (C) Cloudera, Inc. 2020-2026
 #  All rights reserved.
 #
 #  Applicable Open Source License: GNU Affero General Public License v3.0
@@ -34,7 +34,7 @@
 #  BUSINESS ADVANTAGE OR UNAVAILABILITY, OR LOSS OR CORRUPTION OF
 #  DATA.
 #
-# #  Author(s): Paul de Fusco
+# #  Author(s): Paul de Fusco & Syed Hameed
 #***************************************************************************/
 
 from dateutil import parser
@@ -54,7 +54,7 @@ cde_job_name_05_B = "user0XX-05-B-Reports"  #Replace with CDE Job Name for Scrip
 
 #DAG instantiation
 default_args = {
-    'owner': "pauldefusco",
+    'owner': "Syed Hameed",
     'retry_delay': timedelta(seconds=10),
     'depends_on_past': False,
     'start_date': datetime(2024,11,22,8), #Start Date must be in the past
