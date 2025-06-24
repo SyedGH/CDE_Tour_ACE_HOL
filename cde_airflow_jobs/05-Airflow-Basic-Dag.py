@@ -61,7 +61,8 @@ default_args = {
     'end_date': datetime(2027,9,30,8) #End Date must be in the future
 }
 
-dag_name = '{}-05-airflow-pipeline_1'.format(username) #Update name if you hit DAG with same ID already exists error
+dag_name = '{}-05-USERXX'.format(username) #Update name USERXX with your USERName
+
 
 intro_dag = DAG(
     dag_name,
